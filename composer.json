@@ -1,0 +1,15 @@
+{
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "application/class/"
+        },
+        "files": ["parameter.php"]
+    },
+    
+    "require": {
+        "twig/twig": "^3.0",
+        "altorouter/altorouter": "^2.0"
+      
+    }
+}
