@@ -1,0 +1,19 @@
+{
+  "name": "api-spa",
+  "version": "1.0.0",
+  "description": "sample page application using api . who search flags of countries ",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./public/sass/app.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fouad-git/api-spa.git"
+  },
+  "author": "fouad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fouad-git/api-spa/issues"
+  },
+  "homepage": "https://github.com/fouad-git/api-spa#readme"
+}

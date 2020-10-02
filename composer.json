@@ -4,7 +4,7 @@
         "psr-4": {
             "App\\": "application/class/"
         },
-        "files": ["parameter.php"]
+        "files": ["application/parameters.php"]
     },
     
     "require": {

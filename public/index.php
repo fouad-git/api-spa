@@ -1,6 +1,8 @@
 <?php
+
 require_once  dirname(dirname(__FILE__)).'/vendor/autoload.php';
-define('BASE_PATH', '/petites-annonces/public');
+define('BASE_PATH', '');
+
 // pour passer à twig pour avoir les bonnes adresses à (mettre dans le render)
 define('SERVER_URI', $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME']/*.':'.$_SERVER['REMOTE_PORT']*/.BASE_PATH);
 
@@ -8,8 +10,10 @@ define('SERVER_URI', $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME']/*.
 $router = new AltoRouter();
 $router->setBasePath(BASE_PATH);
 
+$router->map('GET', '/', function(){
 
-
+	echo 'hello';
+});
 
 $match = $router->match();
    
@@ -20,4 +24,5 @@ if( is_array($match) && is_callable( $match['target'] ) ) {
 	// Aucune route ne correspond
 	header( $_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found');
 }
+
 ?>
