@@ -10,9 +10,13 @@ define('SERVER_URI', $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME']/*.
 $router = new AltoRouter();
 $router->setBasePath(BASE_PATH);
 
-$router->map('GET', '/', function(){
+$router->map('GET', '/accueil', function(){
+$value= new \App\Countries();
+$values= $value->callCountries();
+$chargeTwig = new \App\Twig('pages/index.html.twig');
+$chargeTwig->render(['values'=>$values ]);
 
-	echo 'hello';
+
 });
 
 $match = $router->match();
