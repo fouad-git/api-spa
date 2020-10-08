@@ -6,16 +6,23 @@
     <meta charset="UTF-8">
     <!--Faire savoir au navigateur que le site Web est optimisé pour les mobiles-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {# <link rel="shortcut icon" href="medias/favicon .ico"/> #}
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
     <!--Importer la police d'icônes Google-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Lien page de style-->
-    <link href="css/style.css" rel="stylesheet">
-
+  
+    <script src="js/countries.js"></script>
     <!--Lien CDN CSS Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     {# CDN jQuery #}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <link href="css/styles.css" rel="stylesheet">
     <!--Titre-->
     <title>{% block title %}Base Twig{% endblock title %} </title>
     {% endblock head %}
@@ -26,18 +33,18 @@
 <body>
 
     <header>
-        
-            <div class="row">
-               <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                 <nav class="navbar navbar-light bg-primary justify-content-between">
-                     <a class="navbar-brand"><span class="logo">ApiFlag</span><i class="fas fa-flag-usa  "></i></a>
-                     <form class="form-inline" action="accueil" method="POST" >
-                       <input class="form-control mr-sm-2 "  name="search" id="query" onkeyup="getcountry(document.getElementById('query').value)" type="search" placeholder="Entrer un nom de pays" aria-label="Search">
-                       <button class="btn btn-outline-dark  my-2 my-sm-0" type="submit">Voir</button>
-                     </form>
-                   </nav>
-               </div> 
-            
+        <div class="container-fluid"> 
+        <div class="row">
+            <div class="col ">
+                <nav class="navbar navbar-light bg-primary justify-content-between">
+                    <a class="navbar-brand"><span class="logo">ApiFlag</span><i class="fas fa-flag-usa  "></i></a>
+                    <form class="form-inline" >
+                        <input class="form-control mr-sm-2 "  name="search" id="query" onkeyup="getcountry(document.getElementById('query').value)" type="search" placeholder="Entrer un nom de pays" aria-label="Search">
+                        <button class="btn btn-outline-dark  my-2 my-sm-0 " type="submit">Voir</button>
+                    </form>
+                </nav>
+            </div> 
+        </div>
             
         </div>
     </header>
@@ -54,7 +61,7 @@
     {% block javascript %}
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="countries.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
         integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">

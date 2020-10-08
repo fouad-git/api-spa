@@ -10,7 +10,7 @@ class Twig{
     {
         $loader = new \Twig\Loader\FilesystemLoader(dirname(dirname(__FILE__)).'/template');
         $twig = new \Twig\Environment($loader, [
-            'cache' => '../cache',
+            'cache' => '../../application/cache',
             'debug' => true,
         ]);
         $twig->addExtension(new \Twig\Extension\DebugExtension());

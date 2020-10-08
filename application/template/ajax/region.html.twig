@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        {% for value in values %}
+            <div class="col-sm-12 col-md-6 col-lg-4 card" style="width: 18rem; ">
+                <img src="{{value.flag}}" class="card-img-top" alt="..."/>
+                <div class="card-body">
+                    <h5 class="card-title">{{value.name}}</h5>
+                    <p class="card-text">Capitale : {{value.capital}}</p>
+                    <p class="card-text">Nombre de popultaion : {{value.population}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{value.region}}</li>  
+                </ul>
+            </div> 
+        {% endfor %}
+    </div>
+</div>
